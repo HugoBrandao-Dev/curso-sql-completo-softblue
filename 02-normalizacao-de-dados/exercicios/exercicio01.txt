@@ -1,0 +1,54 @@
+TABELA cursos
+----------------------------------------------------------
+CAMPO	          |DESCRIÇÃO
+----------------------------------------------------------
+id................|Chave primária da tabela (Primary Key)
+nome..............|Nome do curso ofertado
+preco.............|Preço do curso
+tipo_id...........|Foreign Key do ID da tabela "tipos"
+instrutor_id......|Foreign Key do ID da tabela "instrutores"
+----------------------------------------------------------
+
+TABELA tipos
+----------------------------------------------------------
+CAMPO	          |DESCRIÇÃO
+----------------------------------------------------------
+id................|Chave primária da tabela (Primary Key)
+nome..............|Tipo de curso ofertado (Programação, Banco de Dados, ...)
+----------------------------------------------------------
+
+TABELA instrutores
+----------------------------------------------------------
+CAMPO	          |DESCRIÇÃO
+----------------------------------------------------------
+id................|Chave primária da tabela (Primary Key)
+nome..............|Nome do professor
+telefone..........|Telefone de contato do professor
+----------------------------------------------------------
+
+TABELA alunos
+----------------------------------------------------------
+CAMPO	          |DESCRIÇÃO
+----------------------------------------------------------
+id................|Chave primária da tabela (Primary Key)
+nome..............|Nome do curso ofertado
+endereco..........|Endereço do aluno cadastrado
+email.............|Email de contato do aluno
+----------------------------------------------------------
+
+TABELA compras
+----------------------------------------------------------
+CAMPO	          |DESCRIÇÃO
+----------------------------------------------------------
+id................|Chave primária da tabela (Primary Key)
+data_hora.........|Data e hora que o aluno comprou um ou mais cursos
+----------------------------------------------------------
+
+TABELA matriculas
+----------------------------------------------------------
+CAMPO	          |DESCRIÇÃO
+----------------------------------------------------------
+aluno_id..........|Foreign Key do ID da tabela "alunos" e Chave primária da tabela (Primary Key)
+curso_id..........|Foreign Key do ID da tabela "cursos" e Chave primária da tabela (Primary Key)
+compra_id.........|Foreign Key do ID da tabela "compras"
+----------------------------------------------------------
